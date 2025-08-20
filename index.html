@@ -11,8 +11,13 @@
         </title>
     </head>
     <body class="bg-black h-screen flex items-center justify-center">
-        <div class="bg-gradient-to-r from-pink-500 to-violet-500 image-rendering-pixelated flex flex-col grid grid-rows-3 h-1/2 w-1/2 mx-auto rounded-xl p-1">
-            <div id="display" class="font-VT323 text-3xl text-center text-white">00:00:00:00</div>
+        <div class="bg-gray-500 flex flex-col grid grid-rows-3 h-1/2 w-1/2 mx-auto rounded-xl p-1"
+        style="background-image: linear-gradient(to right, #ef4a9c, #ff1ff400), url('https://grainy-gradients.vercel.app/noise.svg'); background-blend-mode: overlay;
+                background-blend-mode: overlay; filter: contrast(170%) brightness(100%);">
+
+
+
+            <div id="display" class="font-VT323 text-6xl text-center text-white">00:00:00:00</div>
             <div class="sprite"></div>
             <div class="grid grid-cols-3 gap-10" >
                 <button id="Start" class="font-VT323 bg-transparent text-white rounded-lg px-4 h-8 row-start-4 row-end-8">Start</button>
@@ -20,6 +25,7 @@
                 <button id="Restart" class="text-black font-VT323 bg-transparent text-white rounded-lg px-1 h-8 row-start-4 row-end-8">Restart</button>
             </div>
         </div>
+        <div class="noise"></div>
         <script src="script.js"></script>
     </body>
     <style>
@@ -37,6 +43,13 @@
             background-size: auto;
             transform: scale(2);
         }
+        .noise {
+                background:
+                    linear-gradient(to right, pink, violet),
+                    url(https://grainy-gradients.vercel.app/noise.svg);
+                    filter: contrast(170%) brightness(1000%);  
+        }
+
 
         @keyframes play {
              from { background-position: 0px; }
